@@ -1,0 +1,43 @@
+Architecture MVC
+
+Découper notre code en 3 (4) parties
+
+index.php?page=books
+(1). Routeur (index.php)
+Tout les appels http passent par le Routeur
+On va recuperer depuis l'url vers quel "page"
+on veut atterir et on va inclure un fichier et 
+appeller une fonction qui décrira la logique
+correspondante.
+
+
+bookController
+2. Controlleur
+Le controlleur est appellé par le Routeur.
+Le chef d'orchestre il a appeller la vue et parfois 
+avant le modele. il a pour role d'afficher des choses
+et d'aller chercher des choses en B.D juste de
+décrire la logique et donc de les appeller.
+Dans le cas de page=books on a besoin des données dans le modele
+et d'afficher une vue.
+
+3. modele
+Le modele est appellé par le controlleur.
+Il va avoir des fonctions chargé de communiquer avec la B.D.
+ici getBooks() va renvoyer les livres.
+
+4. vue
+La vue est appellé par le controlleur.
+Elle va simplement afficher les données en HTML / CSS /JS. Tres
+peu de PHP juste de quoi atteindre les données d'un tableau par
+exemple avec un foreach
+
+Pour conclure l'intérêt est d'avoir notre code découpé en differente
+parties de sorte que la partie logique, la partie vue et la partie
+communication avec la b.d. soit reutilisable.
+
+
+-----------------------------------------------------
+JS
+fetch() => recuperer des données d'une API
+si votre php renvoie un json.
