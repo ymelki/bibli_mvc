@@ -22,7 +22,7 @@ function getBooks() {
     return $books;
 
 }
-
+/*
 function removeBook($id){
 
     // 1 . Connecte à la B.D.
@@ -34,3 +34,4 @@ function removeBook($id){
     $statement->bindValue(":id",$id,PDO::PARAM_INT);
     $statement->execute();
 }
+*/

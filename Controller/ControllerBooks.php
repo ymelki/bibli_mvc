@@ -2,10 +2,10 @@
 
 function displayBooks(){
     echo "Books";
-    include __DIR__.'/../Model/ModeleBook.php';
+    include_once __DIR__.'/../Model/ModeleBook.php';
 
     $books=getBooks();
-    include __DIR__.'/../Template/Books.php';
+    include_once __DIR__.'/../Template/Books.php';
 
 } 
 
@@ -14,7 +14,7 @@ function removeBook(){
     // appel
     // connecter à la BD.
     // supprimer un enregistrement
-    include __DIR__.'/../Model/ModeleBook.php';
+    include_once __DIR__.'/../Model/ModeleBook.php';
     $id=$_GET['id'];
     removeBook($id);
 
