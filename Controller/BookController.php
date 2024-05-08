@@ -9,6 +9,17 @@ function displayBooks(){
 
 } 
 
+function displayBook(){
+    include_once __DIR__.'/../Model/ModeleBook.php';
+    $id=$_GET['id'];
+    $book=getBook($id);
+    include_once __DIR__.'/../Template/Book.php';
+
+
+
+
+}
+
 // logique de supression
 function removeBook(){
     // appel

@@ -3,7 +3,7 @@
         
     foreach ($books as $book){ ?>
         Nom : 
-        <a href="detailbook.php?id=<?=$book['id_book']?>">
+        <a href="index.php?page=book&id=<?=$book['id_book']?>">
             <?=$book['book_name']?> 
         </a>
         - Catégorie :  <?=$book['book_category']?> 
